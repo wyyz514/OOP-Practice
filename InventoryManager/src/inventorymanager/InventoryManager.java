@@ -1,5 +1,8 @@
 package inventorymanager;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class InventoryManager {
 	
@@ -14,12 +17,37 @@ public class InventoryManager {
 	{
 		if(item != null)
 		{
-			inventory.add(item);
+			if(checkName(item.getName()))
+				inventory.add(item);
+			else
+				{
+					System.out.println("Invalid name");
+					return;
+				}
+				
+		}
+		else
+		{
+			System.out.println("Item is null");
 		}
 	}
 	
 	public static Inventory getInventory()
 	{
 		return inventory;
+	}
+	
+	private static boolean checkName(String name)
+	{
+		Pattern pattern = Pattern.compile("\\s{10000,}");
+		Matcher matcher = pattern.matcher(name);
+		if(matcher.find())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
