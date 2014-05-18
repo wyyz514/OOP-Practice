@@ -17,6 +17,14 @@ public class InventoryManagerTests {
 		assertTrue(inventory.getInventorySize() == inventorySize);
 	}
 	
-	//@Test
-	//public void 
+	@Test
+	public void itemNameTest()
+	{
+		InventoryManager.createInventory();
+		Inventory inventory = InventoryManager.getInventory();
+		Item item = new Item("  ",0,0,0);
+		int inventorySize = inventory.getInventorySize();
+		InventoryManager.saveItem(item, inventory);
+		assertTrue(inventory.getInventorySize() == inventorySize);
+	}
 }
