@@ -4,9 +4,9 @@ public class Item {
 	private String name = "";
 	private int numberInStock = 0;
 	private double price = 0.0;
-	private int id = 0;
+	private long id = 0;
 	
-	public Item(String name, int numberInStock, double price, int id)
+	public Item(String name, int numberInStock, double price, long id)
 	{
 		this.name = name;
 		this.numberInStock = numberInStock;
@@ -14,22 +14,22 @@ public class Item {
 		this.id = id;
 	}
 	
-	private String getName()
+	public String getName()
 	{
 		return this.name;
 	}
 	
-	private int getStock()
+	public int getStock()
 	{
 		return this.numberInStock;
 	}
 	
-	private int getID()
+	public long getID()
 	{
 		return this.id;
 	}
 	
-	private double getPrice()
+	public double getPrice()
 	{
 		return this.price;
 	}
