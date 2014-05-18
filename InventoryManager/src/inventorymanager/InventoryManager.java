@@ -2,13 +2,24 @@ package inventorymanager;
 
 
 public class InventoryManager {
-Inventory inv;
-Item item;
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		InventoryManager im = new InventoryManager();
-		im.inv = new Inventory();
-		im.item = null;
-		im.inv.saveItem(im.item);	
+	
+	private static Inventory inventory;
+	
+	public static void createInventory()
+	{
+		inventory = new Inventory();
+	}
+	
+	public static void saveItem(Item item, Inventory inventory)
+	{
+		if(item != null)
+		{
+			inventory.add(item);
+		}
+	}
+	
+	public static Inventory getInventory()
+	{
+		return inventory;
 	}
 }
