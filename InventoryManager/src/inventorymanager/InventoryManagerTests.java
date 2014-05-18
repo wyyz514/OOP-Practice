@@ -22,9 +22,11 @@ public class InventoryManagerTests {
 	{
 		InventoryManager.createInventory();
 		Inventory inventory = InventoryManager.getInventory();
-		Item item = new Item("  ",0,0,0);
+		Item item = new Item("                                      ",0,0,0);
 		int inventorySize = inventory.getInventorySize();
+		System.out.println(inventorySize);
 		InventoryManager.saveItem(item, inventory);
+		System.out.println(inventory.getInventorySize());
 		assertTrue(inventory.getInventorySize() == inventorySize);
 	}
 }
