@@ -17,7 +17,7 @@ public class InventoryManager {
 	{
 		if(item != null)
 		{
-			if(checkName(item.getName()))
+			if(checkName(item.getName()) == false)
 				inventory.add(item);
 			else
 				{
@@ -39,7 +39,7 @@ public class InventoryManager {
 	
 	private static boolean checkName(String name)
 	{
-		Pattern pattern = Pattern.compile("\\s{10000,}");
+		Pattern pattern = Pattern.compile("\\s{2,}");
 		Matcher matcher = pattern.matcher(name);
 		if(matcher.find())
 		{
