@@ -2,10 +2,10 @@ package inventorymanager;
 
 public class IDGenerator {
 
-	private int generateID()
+	private long generateID()
 	{
 		long id = System.currentTimeMillis();
-		return (int)id;
+		return id;
 	}
 	
 
