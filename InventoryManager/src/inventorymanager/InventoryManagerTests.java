@@ -12,8 +12,11 @@ public class InventoryManagerTests {
 		InventoryManager.createInventory();
 		Inventory inventory = InventoryManager.getInventory();
 		Item item = null;
+		int inventorySize = inventory.getInventorySize(); //holds size of inventory before adding new item
 		InventoryManager.saveItem(item, inventory);
-		assertTrue(inventory.getInventorySize() == 0);
+		assertTrue(inventory.getInventorySize() == inventorySize);
 	}
-
+	
+	//@Test
+	//public void 
 }
