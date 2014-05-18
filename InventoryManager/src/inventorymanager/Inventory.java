@@ -3,7 +3,7 @@ package inventorymanager;
 public class Inventory {
 	final int MAX_INVENTORY_SIZE = 100;
 	private Item[]items; //has many relationship
-	public static int inventorySize = 0;
+	private static int inventorySize = 0;
 	public Inventory()
 	{
 		items = new Item[MAX_INVENTORY_SIZE];
