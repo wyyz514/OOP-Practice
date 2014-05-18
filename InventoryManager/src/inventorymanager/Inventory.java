@@ -12,6 +12,7 @@ public class Inventory {
 	public void add(Item item)
 	{
 		items[inventorySize] = item;
+		inventorySize++;
 	}
 	
 	public int getInventorySize()
